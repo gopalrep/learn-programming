@@ -270,7 +270,7 @@ fulldetail: function(){
 document.write(age.fulldetail()); //access two ways
 document.write(age["fname"]);
 
-document.write(<h3>But strings can also be defined as objects with the keyword new: let d = new String("Hello") </h3>)
+document.write("<h3>But strings can also be defined as objects with the keyword new: let d = new String Hello </h3>")
 </script>
 
 <h3>Js event <br></h3>
@@ -500,16 +500,101 @@ document.write("<h4>scientific (exponent) notation:<br></h4>");
 let ne=432e2; // this decimal number
 document.write(ne);
 
-document.write("<h4>NaN NOt a Number<br></h4>");
+document.write("<h4>NaN Not a Number<br></h4>");
 //NaN is a JavaScript reserved word indicating that a number is not a legal number.
 
-let nty=22123 / "Apple";
+let nty= 22123 / "Apple";
 document.write(nty);
+
+document.write("<h4>JS BigInt<br></h4>");
+
+// JavaScript BigInt variables are used to store big integer values that are too big to be represented by a a normal JavaScript Number.
+// A BigInt can not have decimals.
+let ac = 999999999999995459n; // To create a BigInt, append n to the end of an integer or call BigInt():
+let rt = BigInt("899999878654342190875");
+let gf = Number.isInteger(434);
+let rg = Number.isSafeInteger(473);
+document.write(ac + "<br>" + rt + "<br>" + typeof(ac) + "<br> " + gf + "<br>" + rg);
+
+
+document.write("<h4>JS  array<br></h4>"); // An array is a special variable, which can hold more than one value:
+
+const calors = ["black","White","Number"];    //It is a common practice to declare arrays with the const keyword.
+
+calors[0] = "red";                  //  Array indexes start with 0. [0] is the first element. [1] is the second element.
+
+const  name = [];                              // Array indexes start with 0.
+       name[0] = "Suraj";
+       name[1] = "Neha";         
+       name[2] = "arjun";
+       name.push("Rahul Gandhi")                             // The push() method adds a new element to an array (at the end):
+                           //Changing an Array Element
+
+document.write(name + "<br>" + calors + "<br>" + name[2]);
+
+document.write("<h2>JavaScript Array Methods <br></h2>");
+
+const pr = ["Jorhat","Dhubri","Guwahati","tezpur"];
+      pr.toString();
+
+ document.write(typeof(pr));     
+
+ document.write("<h4>JavaScript join() Array Methods <br></h4>");
+
+    const   kio = ["delte","up","down","end"];
+    const  hell = ["hello","world","my name","CV"]
+    const     P = kio.join(" => ");
+    const     F = kio.pop();                 // The pop() method removes the last element from an array
+    const    KL = kio.shift()                // remove from first
+    const    KO = kio.unshift("X") // The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+    const    LL = kio.length
+    const    CC = kio.concat(hell);
+           kio.splice(2,0, "Zeo", "Jio");  //The splice() method can be used to add new items to an array:
+    const  kik  = kio.slice(4)   
+    const   SOR =kio.sort();
+    const    rev = kio.reverse();
+ 
+           document.write(kio + " " + LL + " " + CC + "<br>" + kik + SOR + " " + rev);
+    
+document.write("<h2>JavaScript array iteration<br></h2>");
+
+const num = [32,4,34,56,12];         
+let gett = "";
+num.forEach(mfun);                         // The forEach() method calls a function (a callback function) once for each array element.
+
+function mfun(value, index , array){
+    gett+= value + "<br>";
+}
+
+document.write(gett);
+
+document.write("<h4>JavaScript array map<br></h4>");
+
+const nume = [32,4,34,56,12];
+let gettt = nume.map(myfunn);
+
+
+function myfunn(value, index , array){
+    return value * 2; "<br>";
+}
+
+document.write(gettt);
+
+document.write("<h4>JavaScript array filter <br></h4>");
+
+const numy = [32,4,34,56,12];
+let gettj = numy.filter(myfuno);
+
+
+function myfuno(value, index , array){
+    return value > 32; "<br>";
+}
+
+document.write(gettj);
+
 
 
 
 </script>
-
-
 </body>
 </html>
