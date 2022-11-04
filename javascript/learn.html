@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <html lang="en">
     <script src="javascript.js"></script>
+    <link rel="stylesheet" href="style.css">
     <!-- This is Inline js--> 
     <script> function Myfun(){                            
     document.getElementById('fun').innerHTML="Hello World"; }
@@ -17,7 +18,7 @@
     <button type='button' onclick='document.getElementById("xemo2").innerHTML="Have Are You Gopal !"'>Hello</button>
  <h4>1. Javascript Html method is getElementById()</h4><br>
  <h4>2. HTML Element with (id=xemo2) and changes the element content(innerHTML) to "Have Are You Gopal"</h4>
- <img id="bulb" alt="bulb" src="pic_bulboff.gif" style="width:50px"><br>
+ <img id="bulb" alt="bulb" src="pic_bulboff.gif"><br>
  <button type="button" onclick="document.getElementById('bulb').src='pic_bulbon.gif'">Turn on The Light</button><br>
  <button type="button" onclick="document.getElementById('bulb').src='pic_bulboff.gif'">Turn off the Light</button>
  <h4>3. JS Can Change The Attribute Value</h4>
@@ -489,7 +490,23 @@ let   vil = `Hello ${fname} ${lname} have are you`
  
 document.write(vil);
 
-ocument.write("<h2>JS number<br></h2>");
+document.write("<h2>JS Number<br></h2>");
+
+let nm=32.9; // this decimal number
+document.write(nm);
+
+document.write("<h4>scientific (exponent) notation:<br></h4>");
+
+let ne=432e2; // this decimal number
+document.write(ne);
+
+document.write("<h4>NaN NOt a Number<br></h4>");
+//NaN is a JavaScript reserved word indicating that a number is not a legal number.
+
+let nty=22123 / "Apple";
+document.write(nty);
+
+
 
 </script>
 
