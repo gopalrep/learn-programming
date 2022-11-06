@@ -655,28 +655,24 @@ function myjik(value, index , array){
 
 document.write(gero);
 
+document.write("<h4>JavaScript array from() <br></h4>");
+
+let tdf = Array.from("ABCDEFGHI");
+
+document.write(typeof(tdf));
 
 
+document.write("<h4>JavaScript array keys<br></h4>");
 
+const namelist = ["Gopal", "vishal", "Suraj", "Rakesh"];
+const keys = namelist.keys();
+let text = "";
 
+for (let x of keys){
+text += x + "<br>";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.write(text);
+}
 
 
 
