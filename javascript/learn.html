@@ -1,17 +1,18 @@
 <!Doctype html>
 <head>
     <meta charset="utf-8">
-    <title>Learn Coding</title>
+    <title>Learn JavaScript</title>
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <html lang="en">
-    <script src="javascript.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>         <!--This is External JS-->
+    <link rel="stylesheet" href="style.css">      <!--This is stylesheet-->
     <!-- This is Inline js-->
     <script> function Myfun(){                            
     document.getElementById('fun').innerHTML="Hello World"; }
     </script>
 </head>
 <body>
+    
     <p id="demo"></p>
     <button type="button" onclick="date()">Click For Current Date</button><br> <!-- there are used external js file-->
     <p id="xemo2"></p>
@@ -671,8 +672,116 @@ let text = "";
 for (let x of keys){
 text += x + "<br>";
 
-document.write(text);
 }
+document.write(text);
+
+</script>
+<h4>JavaScript array entries<br></h4>
+<p id="demod"></p>
+
+<script>
+
+const flist = ["Gopal", "vishal", "Suraj", "Rakesh"];
+const Fl = flist.entries();
+
+for (let xj of Fl) {
+   document.getElementById("demod").innerHTML += xj + "<br>" ;
+}
+
+document.write("<h4>Js array Includes</h4>")
+const flis2 = ["black","White","red"];
+document.write(flis2.includes("black") + "<br>");
+
+document.write("<h2> Date in Javascript </h2>");
+document.write("<h4> JS new Date() creates a date object with the current date and time:</h4>  ");
+
+const dt = new Date(); // By default, JS will use the browser's time zone and display a date as a full text string:
+document.write(dt);
+
+document.write("<h4> Set JS Custom Date </h4>");
+
+const D = new Date("2020-11-23");
+document.write(D);
+
+document.write("<h4> new Date(date string) creates a date object from a date string </h4>");
+const dfd = new Date("Jan 25 , 2020 12:40:12");
+document.write(dfd + "<br>");
+
+document.write("<h4> new Date( year, month, ...) creates a date object with a specified date and time. 7 numbers specify year, month, day, hour, minute, second, and millisecond in that order <br><br>");
+const DIO = new Date(2020, 01, 23, 11,23,00);        // Note : JavaScript counts months from 0 to 11 Example: January = 0 , December = 11
+document.write(DIO);
+
+document.write("<h4> The toDateString() method converts a date to a more readable format </h4>");
+const DR = new Date();
+      DC = DR.toDateString();
+document.write(DC);
+
+document.write("<h4> JS Date to Convert UTC Formate <br> </h4>")
+const DD = new Date();
+     DCU = DD.toUTCString();      // UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).
+document.write(DCU);
+
+document.write("<h4> JS Date to Convert ISO Formate <br> </h4>")
+const D1 = new Date();
+     DC1 = D1.toISOString();  // 2015-03-25" (The International Standard)
+document.write(DC1);
+
+document.write("<h3>Date Get Method in Javascript </h3>");
+document.write("<h4>Date set Method in Javascript Example used keyword set for set date example : setFullYear() </h4>");
+
+const ol =new Date();
+let   GY = ol.getFullYear();
+let   GM = ol.getMonth();
+let   gd = ol.getDate();  
+let   gh = ol.getHours();
+let   gm = ol.getMinutes();
+let   gs = ol.getSeconds();
+let  gms = ol.getMilliseconds();
+let  gt = ol.getTime();
+document.write(GY + "<br>");
+document.write(GM + "<br>");
+document.write(gd + "<br>");
+document.write(gh + "<br>");
+document.write(gm + "<br>");
+document.write(gs + "<br>");
+document.write(gms + "<br>");
+
+document.write("<h3> Javascript Math Object </h3>");
+
+const mp = Math.PI;
+let   mr = Math.round(4.6);
+let   mc = Math.ceil(4.5);
+let   mf = Math.floor(2.2);
+let   mt = Math.trunc(3.9);
+let   ms = Math.sign(3.9);
+let  mtp = Math.pow(3,8);
+let   ma = Math.abs(-5)
+let  mts = Math.sqrt(64);
+let  ms1 = Math.sin();
+let  mc1 = Math.cos();
+let   mm = Math.min(8,10,7,2,1);
+let  mm2 = Math.max(8,9,8,21,22);
+let  mr1 = Math.random(10);
+//let   ml = Math.log(1);
+//let   ml1 = Math.log10(10);
+
+document.write(mp + "<br>");
+document.write(mr + "<br>");
+document.write(mc + "<br>");
+document.write(mf + "<br>");
+document.write(mt + "<br>");
+document.write(ms + "<br>");
+document.write(mtp + "<br>");
+document.write(mts + "<br>");
+document.write(ma + "<br>");
+document.write(mm + "<br>");
+document.write(mm2 + "<br>");
+document.write(mr1 + "<br>");
+
+
+
+
+
 
 
 
