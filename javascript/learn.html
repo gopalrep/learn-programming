@@ -905,13 +905,69 @@ document.write("<h1>Break And Continue in Javascript</h1>");
 geter3= "";
 inc1 = 0;
 
-for
+for (inc1 = 0; inc1 < 10; inc1++) {
+ if (inc1 ===4 ) {break};
+ 
+ geter3 +="Ok" + "<br>";
+ 
+}
 
+document.write(geter3)
 
+geter4= "";
+inc2 = 0;
 
+for (inc2 = 0; inc2 < 10; inc2++) {
+ if (inc2 ===2 ) {continue};
+ 
+ geter4 += inc2 + "<br>";
+ 
+}
 
+document.write(geter4)
+
+document.write("<h1>Sets in Javascript</h1>");
+
+//new Set()	Creates a new Set
+//add()	Adds a new element to the Set
+//delete()	Removes an element from a Set
+//has()	Returns true if a value exists in the Set
+//forEach()	Invokes a callback for each element in the Set
+//values()	Returns an iterator with all the values in a Set
+//Property	Description
+//size	Returns the number of elements in a Set
+let sets = new Set("good","morning");
+let kj = "test1";
+let ji = "test2";
+ sets.add(kj);                     // Add Values to the Set                          
+ sets.add(ji);
+document.write(sets.size);        // size: return the number of elements
+document.write(sets.values());
+
+document.write("<h1>Map in Javascript</h1>");
+// A map hold key-values pairs where the keys can be any datatype
+// a map remembers the original insertion order of the keys
+
+// new Map()	Creates a new Map
+// Method	Description
+// set()	Sets the value for a key in a Map
+// get()	Gets the value for a key in a Map
+// delete()	Removes a Map element specified by the key
+// has()	Returns true if a key exists in a Map
+// forEach()	Calls a function for each key/value pair in a Map
+// entries()	Returns an iterator with the [key, value] pairs in a Map
+// Property	Description
+// size	Returns the number of elements in a Map
+
+const nmap = new Map([["Apple",50],["Banana",40]]);
+nmap.set("Grapes",150);
+nmap.set("Pineapple",60);
+document.write(nmap.get("Grapes")+ "<br>");
+document.write(nmap.size + "<br>");
+document.write(nmap.has("apples"));
 
 
 </script>
+
 </body>
 </html>
