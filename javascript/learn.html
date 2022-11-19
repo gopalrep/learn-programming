@@ -978,14 +978,50 @@ document.write("<h1> JavaScript Type Conversion </h1>");
 let nub   = String(3212);
 let st    = Number("Gopal");
 let nts   = 2121;
-let conc  = nts.toString();
 let dts   = new Date();             //converts string to number
+let btos  = String(true);
 
 document.write(typeof(nub) + "<br>");
 document.write(typeof(st) + "<br>");
 document.write(typeof(Number(dts)) + "<br>");
-document.write(typeof(Number(dts)) + "<br>");
-document.write(conc) + "<br>");
+document.write((typeof(nts.toString())) + "<br>");      
+document.write(typeof(String(dts.getDate())) + "<br>");    // Converting Date to String
+document.write(typeof(Number(dts.getDate())) + "<br>");    // Converting Date To Number
+document.write(Number(dts) + "<br>");                     // Converting Date to Number 2
+document.write(typeof(btos));
+
+document.write("<h1> JavaScript Regular Expressions <br></h1>");
+/*A regular expression is a sequence of characters that forms a search pattern.
+
+The search pattern can be used for text search and text replace operations. */
+
+let dtext = "I am go to  Gopal I";
+let ireg  = dtext.(/gopal/i);                     // using i Performing case-insensitive matching
+let greg  = dtext.match(/I/g);                    // using g for perform global match
+let breg  = dtext.match(/[I]/g);                  // Find any of the characters between the brackets
+let nreg  = dtext.match(/[0-9]/g);               // Find any of the digits between the brackets
+let areg  = dtext.match(/(am|Gopal)/g);          // Find any of the alternatives separated with |
+// Metacharacters are characters with a special meaning:
+
+let fd   = dtext.match(/\d/g);                    // find a digit
+let fws  = dtext.match(/\s/g); 
+let fbs  = dtext.match(/\bGo/);
+let ebs  = dtext.match(/Go\b/);
+
+
+document.write(ireg + "<br>");
+document.write(greg);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
