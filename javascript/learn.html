@@ -963,8 +963,33 @@ const nmap = new Map([["Apple",50],["Banana",40]]);
 nmap.set("Grapes",150);
 nmap.set("Pineapple",60);
 document.write(nmap.get("Grapes")+ "<br>");
-document.write(nmap.size + "<br>");
+document.write(nmap.size + "<br>");   
 document.write(nmap.has("apples"));
+
+document.write("<h1> JavaScript Type Conversion </h1>");
+
+//Converting Strings to Numbers
+//Converting Numbers to Strings
+//Converting Dates to Numbers
+//Converting Numbers to Dates
+//Converting Booleans to Numbers
+//Converting Numbers to Booleans
+
+let nub   = String(3212);
+let st    = Number("Gopal");
+let nts   = 2121;
+let conc  = nts.toString();
+let dts   = new Date();             //converts string to number
+
+document.write(typeof(nub) + "<br>");
+document.write(typeof(st) + "<br>");
+document.write(typeof(Number(dts)) + "<br>");
+document.write(typeof(Number(dts)) + "<br>");
+document.write(conc) + "<br>");
+
+
+
+
 
 
 </script>
