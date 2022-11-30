@@ -995,28 +995,46 @@ document.write("<h1> JavaScript Regular Expressions <br></h1>");
 
 The search pattern can be used for text search and text replace operations. */
 
-let dtext = "I am go to  Gopal I";
-let ireg  = dtext.(/gopal/i);                     // using i Performing case-insensitive matching
-let greg  = dtext.match(/I/g);                    // using g for perform global match
-let breg  = dtext.match(/[I]/g);                  // Find any of the characters between the brackets
-let nreg  = dtext.match(/[0-9]/g);               // Find any of the digits between the brackets
-let areg  = dtext.match(/(am|Gopal)/g);          // Find any of the alternatives separated with |
+let dtext = "I am go to  Gopal I 1";
+let ireg  = dtext.match(/gopal/i);                 // using i Performing case-insensitive matching (interpreting upper- and lowercase letters as being the same)
+let greg  = dtext.match(/I/g);                     // using g for perform global match
+let breg  = dtext.match(/[I]/g);                   // Find any of the characters between the brackets
+let nreg  = dtext.match(/[0-9]/g);                 // Find any of the digits between the brackets
+let areg  = dtext.match(/(Gopal| am)/g);            // Find any of the alternatives separated with |
+
+
+
 // Metacharacters are characters with a special meaning:
 
 let fd   = dtext.match(/\d/g);                    // find a digit
-let fws  = dtext.match(/\s/g); 
-let fbs  = dtext.match(/\bGo/);
-let ebs  = dtext.match(/Go\b/);
-
+let fws  = dtext.match(/\s/g);                    // find a whitespace character
+let fbs  = dtext.search(/\bgo/);                  // Find a match at the beginning of a word like this: \bWORD, 
+let ebs  = dtext.search(/al\b/);                 // or at the end of a word like this: WORD\b
+let ucod = dtext.match(/\u0049/g);
 
 document.write(ireg + "<br>");
-document.write(greg);
+document.write(greg + "<br>");
+document.write(breg + "<br>");
+document.write(nreg + "<br>");
+document.write(areg + "<br>");
+document.write(fd + "<br>");
+document.write(fws + "<br>");
+document.write(fbs + "<br>");
+document.write(ebs + "<br>");
+document.write(ucod + "<br>")
+
+// Quantifiers define quantities:
+
+let qt = dtext.match(/I+/g);
 
 
 
+document.write(qt + "<b>");
 
 
+// The test() method is a RegExp expression method.It searches a string for a pattern, and returns true or false, depending on the result.
 
+document.write(pattern.test("am"));
 
 
 
