@@ -165,7 +165,7 @@ document.getElementById('var').innerHTML=x;
     </h3>   
     <h3>Arithmetic operaters example: <br></h3>
 <script>
-
+"use strict";
  let $  = 12;
  let _c = 32;
  let A  = $ + _c
@@ -247,6 +247,7 @@ Local variables can only be accessed from within the function.
 </h4>
 
 <script>
+    "use strict";
 function mydf(x,y){
 
     return x+y;
@@ -277,6 +278,8 @@ document.write("<h3>But strings can also be defined as objects with the keyword 
 <h3>Js event <br></h3>
 <p id="ds"></p>
 <script>
+"use strict";
+
 function dis(){
 
     document.getElementById("ds").innerHTML= Date();
@@ -383,6 +386,7 @@ document.write(cp);
 <button type="button" onclick="mj()">Click for add</button>
 
 <script>
+"use strict";
 
 function mj(){
 
@@ -1032,9 +1036,75 @@ let qt = dtext.match(/I+/g);
 document.write(qt + "<b>");
 
 
-// The test() method is a RegExp expression method.It searches a string for a pattern, and returns true or false, depending on the result.
+</script>
 
-document.write(pattern.test("am"));
+<p id="pt">Hello My Name is Gopal Singh</p>
+<p id="fetch"> </p>
+
+<script>
+
+let pattt = document.getElementById("pt").innerHTML;
+const patti = /y/;
+document.write((patti.test(pattt)  + "<br>" ));             // It searches a string for a pattern, and returns true or false, depending on the result
+
+let exe = patti.exec(pattt);
+
+document.write(exe[0] + "<br>");
+document.write(exe.index + "<br>");
+document.write(exe.input + "<br>");
+document.write("<h1>Error In Javascript</h1>");
+</script>
+<input id="dex" type="text">
+<button type="button" onclick="MyFunction()">Test Input</button>
+<p id="P01"></p>
+
+
+
+<script>
+
+// The try statement defines a code block to run (to try).
+
+// The catch statement defines a code block to handle any error.
+
+// The finally statement defines a code block to run regardless of the result.
+
+// The throw statement defines a custom error.
+
+function MyFunction() {
+  const message = document.getElementById("P01");
+  message.innerHTML = "";
+  let x = document.getElementById("dex").value;
+  try { 
+    if(x == "")  throw "is empty";
+    if(isNaN(x)) throw "is not a number";
+    x = Number(x);
+    if(x > 10)   throw "is too high";
+    if(x < 5)  throw "is too low";
+  }
+  catch(err) {
+    message.innerHTML = "Input " + err;
+  }
+  finally {
+    document.getElementById("dex").value = "";
+  }
+}
+
+</script>
+<h3>Name : Sets or return an error name</h3>
+<p id = "tes2"></p>
+<script>
+let n = 12;
+try{
+
+    n.toPrecision(111); 
+
+}
+catch (errr){
+
+document.getElementById("tes2").innerHTML = errr.message + "<br>" + errr.name;   // message	Sets or returns an error message (a string) // name Sets or returns an error name 
+
+}
+
 
 
 
@@ -1047,6 +1117,20 @@ document.write(pattern.test("am"));
 
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
