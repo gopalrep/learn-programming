@@ -10,6 +10,7 @@
     <script> function Myfun(){                            
     document.getElementById('fun').innerHTML="Hello World"; }
     </script>
+    <script type="module" src="xfile.js"></script>
 </head>
 <body>
     
@@ -1105,15 +1106,61 @@ document.getElementById("tes2").innerHTML = errr.message + "<br>" + errr.name;  
 
 }
 
+document.write("<h1> Arrow Function in Javascript </h1> <br>");
+
+// Arrow function allow us to write shorter function syntax
+
+let mfun1 = (a,  b) =>  a * b;
+
+document.write(mfun1(9 ,9) + "<br>" );
+
+document.write("<h4> Arrow Function with parameter </h4> <br>");
+
+hello = (val) => "Hello" + val;
+
+document.write(hello("Guyz"));
+
+document.write("<h4> Arrow Function with parentheses </h4> <br>");
+
+hello1 = val1 => "Hello" + val1;
+
+document.write(hello1(" World"));
+
+document.write("<h1> Classes in Javascript </h1> <br>");
+
+// javascript classes are template for javascript objects
+// use the keyword class to create a class
+// always add a method named constructer() :
+// a javascript class is not an object
+// its is a template for javascript objects
+
+class  detail {
+  constructor(SR_No , Name) {
+    this.SR_No = SR_No;
+    this.Name = Name;
+
+ }
+  ages() {
+    let dates = new Date();
+    return dates.getFullYear();
+
+ }
+
+}
+
+let data = new detail("SR_No", "Name");
+document.write(data.SR_No + "   ");
+document.write(data.Name + "<br>");
+document.write(data.ages());
+
+document.write("<h1>Modules in Javascript</h1>" + "<br>");
+
+import {namos} from "xfile.js";
 
 
 
 
-
-
-
-
-
+</script>
 
 
 </script>
